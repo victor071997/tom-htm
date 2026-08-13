@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flas-ind-deployment
+  labels:
+    app: flas-ind
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: flas-ind
+  template:
+    metadata:
+      labels:
+        app: flas-ind
+    spec:
+      containers:
+      - name: flas-ind
+        image: manojmylabathula/flask-index:v1
+        ports:
+        - containerPort: 5000
