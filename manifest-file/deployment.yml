@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
       - name: flas-ind
-        image: manojmylabathula/flask-index:v1
+        image: manojmylabathula/flask-index:v2
         ports:
         - containerPort: 5000
